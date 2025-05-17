@@ -63,7 +63,7 @@ const AuthSensitiveRoutesManager = () => {
     return () => {
       authListener?.subscription.unsubscribe();
     };
-  }, [loading]); // Added loading to dependency array to handle edge cases if needed
+  }, []); // Run once on mount to set up session listener
 
   if (loading) {
     return (
